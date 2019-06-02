@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!-- weather.getBase()
+to dla thyemyleafa to samo co: weather.base
+-->
+
+<h1> Temperatura to:</h1>
+<p th:text="${weather.temperatureModel.temperatureInCelcius} + &#8451"/>
+<img th:src = "@{'http://openweathermap.org/img/w/' + ${weather.detailsModelList.get(0).icon} + .png}"/>
+
+<h3>Ciśnienie to:</h3>
+<p th:text="${weather.temperatureModel.pressure} + hPa"/>
+
+<a href="/">Cofnij</a>
+
+</body>
+</html>
